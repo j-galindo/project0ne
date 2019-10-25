@@ -31,13 +31,15 @@ p{
 
 .container{
   display:flex;
-  flex-flow: row;
+  flex-direction:row wrap;
   
 }
 .content{
+  box-sizing: border-box;
   width:100%;
 }
 .image{
+  box-sizing: border-box;
   background-image: url("./images/Three.jpeg");;
   width:100%;
   background-position:cover;
@@ -58,16 +60,24 @@ p{
   background-repeat: round;
   background-size: contain;
 }
-@media only screen and (max-width:760px){
+@media only screen and (max-width:932px){
   .container{
     display:flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+  }
+  .content{
+    background-color: aliceblue;
   }
   .image {
-    background-image: url("./images/Three.jpeg");
-    width: 100%;
-    background-position: cover;
-    background-repeat: round;
-    background-size: contain;
-}
+    display: list-item;
+    padding: 22%;
+  }
+  .image1 {
+    display: list-item;
+    padding: 22%;
+  }
+  .image2 {
+    width:40%;
+    padding: 30%;
+  }
 }
